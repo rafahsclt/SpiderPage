@@ -33,9 +33,9 @@ const Home:React.FC = () => {
 
     <main className="container">
       <div className="container-item-1">
-        <p>
+        <section className="px-1">
           <img src={spiderText} className="spider-text" alt="Spider Man Text"/>
-        </p>
+        </section>
         <p>
           Na aventura mais recente do universo de Marvel's Spider-Man, 
           o adolescente Miles Morales está se adaptando à sua nova 
@@ -47,15 +47,15 @@ const Home:React.FC = () => {
           Miles precisa reconhecer e assumir o título de Spider-Man.
         </p>
 
-        <p>
+        <section>
           <a href="" className="btn-primary">Pre-order Now</a>
           <a href="" className="btn-secondary">Watch the Teaser</a>
-        </p>
+        </section>
 
-        <p>
+        <section>
           <FaPlaystation size={24} />
           <img src={marvelImg} alt="Marvel"/>
-        </p>
+        </section>
       </div>
 
       <div className="container-item-2">

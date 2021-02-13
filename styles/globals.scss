@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400&display=swap');
+
 *, *::after, *::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Mukta' , sans-serif;
 }
+
+@import 'partials/colors';
 
 body {
   width: 100%;
@@ -10,3 +15,32 @@ body {
 
   background-color: #1a1a1a;
 }
+
+img {
+  display: block;
+  width: 100%;
+}
+
+svg {
+  color: $gray-3;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+p {
+  font-size: 16px;
+  color: $gray-3;
+  letter-spacing: 2px;
+  line-height: 140%;
+}
+
+@import 'partials/layout';
+@import 'partials/menu';
+@import 'partials/animations';

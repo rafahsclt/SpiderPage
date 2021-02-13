@@ -1,7 +1,8 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaPlaystation } from 'react-icons/fa'
 
 import logoImg from '../assets/logo-spiderman.svg'
+import marvelImg from '../assets/marvel.svg'
 import spiderText from '../assets/spiderman-text.png'
 import spiderImg from '../assets/spider-man.png'
 
@@ -14,7 +15,7 @@ const Home:React.FC = () => {
           <div className="logo">
             <img src={logoImg} className="logo-image" alt="Logo"/>
           </div>
-          <ul className="nav-list">
+          <ul className="navbar-list">
             <li><a href="" className="nav-link">Home</a></li>
             <li><a href="" className="nav-link">Story</a></li>
             <li><a href="" className="nav-link">Wallpapers</a></li>
@@ -22,10 +23,10 @@ const Home:React.FC = () => {
           </ul>
         </div>
         <div className="navbar-social">
-          <FaFacebook />
-          <FaInstagram />
-          <FaYoutube />
-          <FaTwitter />
+          <FaFacebook size={24} />
+          <FaInstagram size={24} />
+          <FaYoutube size={24} />
+          <FaTwitter size={24} />
         </div>
       </nav>
     </header>
@@ -33,7 +34,7 @@ const Home:React.FC = () => {
     <main className="container">
       <div className="container-item-1">
         <p>
-          <img src={spiderText} alt="Spider Text"/>
+          <img src={spiderText} className="spider-text" alt="Spider Man Text"/>
         </p>
         <p>
           Na aventura mais recente do universo de Marvel's Spider-Man, 
@@ -52,12 +53,13 @@ const Home:React.FC = () => {
         </p>
 
         <p>
-
+          <FaPlaystation size={24} />
+          <img src={marvelImg} alt="Marvel"/>
         </p>
       </div>
 
       <div className="container-item-2">
-
+        <img src={spiderImg} className="spider-img" alt="Spider Man Image"/>
       </div>
     </main>
     </>

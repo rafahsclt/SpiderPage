@@ -31,6 +31,10 @@ header {
     li {
         margin-left: 24px;
     }
+
+    @include responsive() {
+        display: none;
+    }
 }
 
 .nav-link {
@@ -72,6 +76,18 @@ header {
     }
 }
 
+.bx {
+    height: 48px;
+    width: 48px;
+    background-color: $white;
+
+    display: none;
+    
+    @include responsive() {
+        display: block;
+    }
+}
+
 .navbar-social {
     display: flex;
 
@@ -84,5 +100,9 @@ header {
         cursor: pointer;
         color: $red;
         transform: translate3d(0,-3px,0);
+    }
+
+    @include responsive() {
+        display: none;
     }
 }

@@ -3,11 +3,18 @@
     margin: 0 auto;
     padding: 36px 16px;
 
-    overflow: hidden;
+    overflow: none;
+    height: 85%;
 
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    @include responsive() {
+        flex-direction: column;
+        height: auto;
+        overflow: hidden;
+    }
 }
 
 .container-item-1 {
@@ -22,9 +29,24 @@
     flex: 1;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.border {
+    border: 1px solid red;
+}
+
 .spider-img {
     width: 150%;
     transform: translate3d(-170px, 0, 0);
+
+    @include responsive() {
+        width: 100%;
+        transform: translate3d(0,0,0);
+    }
 }
 
 .btn-primary {
@@ -121,4 +143,33 @@
             width: 101%;
         }
     }
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    &::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+
+        background: linear-gradient(110deg, 
+        $blue-dark 25%, 
+        rgba(11, 12, 16, 0.80) 50%,
+        $blue-dark 70%);
+        
+      }
 }

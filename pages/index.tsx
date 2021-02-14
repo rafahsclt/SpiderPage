@@ -1,10 +1,10 @@
 import React from 'react'
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaPlaystation } from 'react-icons/fa'
 
-import logoImg from '../assets/logo-spiderman.svg'
-import marvelImg from '../assets/marvel.svg'
-import spiderText from '../assets/spiderman-text.png'
-import spiderImg from '../assets/spider-man.png'
+import logoImg from '../public/logo-spiderman.svg'
+import marvelImg from '../public/marvel.svg'
+import spiderText from '../public/spiderman-text.png'
+import spiderImg from '../public/spider-man.png'
 
 const Home:React.FC = () => {
   return (
@@ -28,15 +28,29 @@ const Home:React.FC = () => {
           <FaYoutube size={24} />
           <FaTwitter size={24} />
         </div>
+        <div className="bx mr-2">
+
+        </div>
       </nav>
     </header>
+
+    <div className="bg-video">
+      <video 
+        className="video"
+        autoPlay
+        muted
+        loop  
+      >
+        <source src="video/spiderman-video.mp4" type="video/mp4"/>
+      </video>
+    </div>
 
     <main className="container">
       <div className="container-item-1">
         <section className="px-1">
           <img src={spiderText} className="spider-text" alt="Spider Man Text"/>
         </section>
-        <p>
+        <p className="my-2">
           Na aventura mais recente do universo de Marvel's Spider-Man, 
           o adolescente Miles Morales está se adaptando à sua nova 
           casa enquanto segue os passos de seu mentor, Peter Parker, 
@@ -47,14 +61,14 @@ const Home:React.FC = () => {
           Miles precisa reconhecer e assumir o título de Spider-Man.
         </p>
 
-        <section>
+        <section className="my-1">
           <a href="" className="btn-primary">Pre-order Now</a>
-          <a href="" className="btn-secondary">Watch the Teaser</a>
+          <a href="" className="btn-secondary ml-2">Watch the Teaser</a>
         </section>
 
-        <section>
-          <FaPlaystation size={24} />
-          <img src={marvelImg} alt="Marvel"/>
+        <section className="flex my-2">
+          <FaPlaystation size={36} className="mr-2" />
+          <img src={marvelImg} alt="Marvel" width={70} height={36} />
         </section>
       </div>
 

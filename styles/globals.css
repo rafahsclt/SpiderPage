@@ -40,7 +40,7 @@ p {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 36px 16px;
+  padding: 0 16px;
   overflow: none;
   height: 85%;
   display: -webkit-box;
@@ -103,9 +103,9 @@ p {
 }
 
 .spider-img {
-  width: 150%;
-  -webkit-transform: translate3d(-170px, 0, 0);
-          transform: translate3d(-170px, 0, 0);
+  width: 135%;
+  -webkit-transform: translate3d(-180px, 0, 0);
+          transform: translate3d(-180px, 0, 0);
 }
 
 @media screen and (max-width: 960px) {
@@ -220,6 +220,31 @@ p {
   left: 0;
   display: block;
   background: linear-gradient(110deg, #0A0C10 25%, rgba(11, 12, 16, 0.8) 50%, #0A0C10 70%);
+}
+
+@media screen and (max-width: 960px) {
+  .bg-video {
+    height: auto;
+  }
+}
+
+.modal-loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: linear-gradient(225deg, #EA1D22 0%, #B31317 100%);
 }
 
 header {
@@ -345,6 +370,42 @@ header {
 @media screen and (max-width: 960px) {
   .navbar-social {
     display: none;
+  }
+}
+
+.modal-logo {
+  fill: transparent;
+  -webkit-animation: modal-logo 12s ease infinite alternate;
+          animation: modal-logo 12s ease infinite alternate;
+}
+
+@-webkit-keyframes modal-logo {
+  0% {
+    stroke-width: 0;
+    stroke-dasharray: 1 100;
+  }
+  25% {
+    stroke-width: 1;
+    stroke-dasharray: 100 0;
+  }
+  60%, 100% {
+    stroke-width: 0.3;
+    fill: #E5E9EF;
+  }
+}
+
+@keyframes modal-logo {
+  0% {
+    stroke-width: 0;
+    stroke-dasharray: 1 100;
+  }
+  25% {
+    stroke-width: 1;
+    stroke-dasharray: 100 0;
+  }
+  60%, 100% {
+    stroke-width: 0.3;
+    fill: #E5E9EF;
   }
 }
 
